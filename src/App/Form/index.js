@@ -1,4 +1,5 @@
 import { CurrencyElement } from "./CurrencyElement";
+import { AmountElement } from "./AmountElement";
 
 const Form = () => {
 
@@ -12,6 +13,7 @@ const Form = () => {
                         Currency converter 😉
                 </legend>
                 <CurrencyElement/>
+                <AmountElement/>
             </fieldset>
         </form>
     )
