@@ -1,0 +1,5 @@
+const CurrencyElement = () => {
+
+};
+
+export {CurrencyElement};

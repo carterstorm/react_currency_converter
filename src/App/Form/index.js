@@ -1,3 +1,5 @@
+import { CurrencyElement } from "./CurrencyElement";
+
 const Form = () => {
 
     return (
@@ -9,6 +11,7 @@ const Form = () => {
                     className="form__legend">
                         Currency converter 😉
                 </legend>
+                <CurrencyElement/>
             </fieldset>
         </form>
     )
