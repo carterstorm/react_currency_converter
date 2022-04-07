@@ -1,5 +1,6 @@
 import { CurrencyElement } from "./CurrencyElement";
 import { AmountElement } from "./AmountElement";
+import { ChangeButton} from "./ChangeButton";
 
 const Form = () => {
 
@@ -15,6 +16,7 @@ const Form = () => {
                 <CurrencyElement/>
                 <AmountElement/>
             </fieldset>
+            <ChangeButton/>
         </form>
     )
 };
