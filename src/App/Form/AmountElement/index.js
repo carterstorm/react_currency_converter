@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const AmountElement = () => {
+    const [amount, setAmount] = useState("");
 
     return (
         <p>
@@ -9,7 +12,9 @@ const AmountElement = () => {
                         Amount to change (PLN):
                 </span>
                 <input 
-                    type="number" 
+                    type="number"
+                    value={amount}
+                    onChange={({target}) => setAmount(target.value)}
                     step="0.01" 
                     min="1" 
                     className="form__input" 
