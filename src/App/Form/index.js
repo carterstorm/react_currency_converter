@@ -1,8 +1,6 @@
 import { ChangeButton} from "./ChangeButton";
 import { ResultElement } from "./ResultElemet";
 import { currencies } from "./currencies";
-import CurrencyElement from "./CurrencyElement";
-import AmountElement from "./AmountElement";
 import { useState } from "react";
 
 const Form = () => {
@@ -13,7 +11,7 @@ const Form = () => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         console.log(currency);
-        console.log(amount)
+        console.log(amount);
     }
 
     return (
@@ -25,8 +23,50 @@ const Form = () => {
                     className="form__legend">
                         Currency converter 😉
                 </legend>
-                <CurrencyElement currency={currency} setCurrency={setCurrency}/>
-                <AmountElement amount={amount} setAmount={setAmount}/>
+                <p>
+                    <label 
+                        className="form__label">
+                        <span 
+                            className="form__labelText"
+                        >
+                            Currency:
+                        </span>
+                        <select 
+                            className="form__input"
+                            value={currency}
+                            onChange={({target}) => setCurrency(target.value)}
+                        >
+                            {currencies.map((item) => (
+                                <option
+                                    key={item.short}
+                                    value={item.short}
+                                >
+                                    {item.short}
+                                </option>
+                                ))
+                            }
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label 
+                        className="form__label">
+                        <span 
+                            className="form__labelText"
+                        >
+                            Amount to change (PLN):
+                        </span>
+                        <input 
+                            type="number"
+                            value={amount}
+                            onChange={({target}) => setAmount(target.value)}
+                            step="0.01" 
+                            min="1" 
+                            className="form__input" 
+                            required
+                        />
+                    </label>
+                </p>
             </fieldset>
             <ChangeButton/>
             <ResultElement/>
