@@ -1,6 +1,7 @@
 import { ChangeButton} from "./ChangeButton";
 import { ResultElement } from "./ResultElemet";
 import { currencies } from "./currencies";
+import CurrencyElement from "./CurrencyElement";
 import { useState } from "react";
 
 const Form = () => {
@@ -23,30 +24,7 @@ const Form = () => {
                     className="form__legend">
                         Currency converter 😉
                 </legend>
-                <p>
-                    <label 
-                        className="form__label">
-                        <span 
-                            className="form__labelText">
-                                Currency:
-                        </span>
-                        <select 
-                            className="form__input"
-                            value={currency}
-                            onChange={({target}) => setCurrency(target.value)}
-                            >
-                                {currencies.map((item) => (
-                                    <option
-                                        key={item.short}
-                                        value={item.short}
-                                        >
-                                        {item.short}
-                                    </option>
-                                    ))
-                                }
-                        </select>
-                    </label>
-                </p>
+                <CurrencyElement currency={currency} setCurrency={setCurrency}/>
                 <p>
                     <label 
                         className="form__label">
