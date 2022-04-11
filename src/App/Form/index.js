@@ -2,6 +2,7 @@ import { ChangeButton} from "./ChangeButton";
 import { ResultElement } from "./ResultElemet";
 import { currencies } from "./currencies";
 import CurrencyElement from "./CurrencyElement";
+import AmountElement from "./AmountElement";
 import { useState } from "react";
 
 const Form = () => {
@@ -25,23 +26,7 @@ const Form = () => {
                         Currency converter 😉
                 </legend>
                 <CurrencyElement currency={currency} setCurrency={setCurrency}/>
-                <p>
-                    <label 
-                        className="form__label">
-                        <span 
-                            className="form__labelText">
-                                Amount to change (PLN):
-                        </span>
-                        <input 
-                            type="number"
-                            value={amount}
-                            onChange={({target}) => setAmount(target.value)}
-                            step="0.01" 
-                            min="1" 
-                            className="form__input" 
-                            required/>
-                    </label>
-                </p>
+                <AmountElement amount={amount} setAmount={setAmount}/>
             </fieldset>
             <ChangeButton/>
             <ResultElement/>

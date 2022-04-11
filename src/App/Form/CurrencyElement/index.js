@@ -2,7 +2,7 @@ import { currencies } from "../currencies";
 
 const CurrencyElement = (currency, setCurrency) => {
 
-    const onChangeValue = ({target}) => {
+    const onChangeCurrency = ({target}) => {
         setCurrency(target.value)
     };
 
@@ -17,7 +17,7 @@ const CurrencyElement = (currency, setCurrency) => {
                 <select 
                     className="form__input"
                     value={currency}
-                    onChange={onChangeValue}
+                    onChange={onChangeCurrency}
                 >
                     {currencies.map((item) => (
                         <option
