@@ -4,6 +4,7 @@ import CurrencyElement from "./CurrencyElement";
 import AmountElement from "./AmountElement";
 import { currencies } from "./currencies";
 import { useState } from "react";
+import "../Form/index.css";
 
 const Form = () => {
 
