@@ -1,0 +1,9 @@
+.clock {
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .clock {
+        text-align: center;
+    }
+}
