@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../Clock/index.css";
 
 const Clock = () => {
 
@@ -11,10 +12,10 @@ const Clock = () => {
     }, []);
 
     return (
-        <p>
-            Dzisiaj jest
+        <p className="clock">
+            Today is
             {" "}
-            {date.toLocaleDateString(undefined, {
+            {date.toLocaleDateString("en-US", {
                 weekday: "long",
                 day: "numeric",
                 month: "long",
