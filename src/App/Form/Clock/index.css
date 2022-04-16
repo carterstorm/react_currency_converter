@@ -1,5 +1,7 @@
 .clock {
     text-align: right;
+    font-family: monospace;
+    font-size: 12px;
 }
 
 @media (max-width: 600px) {
