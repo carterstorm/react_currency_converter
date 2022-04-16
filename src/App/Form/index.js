@@ -2,6 +2,7 @@ import { ChangeButton} from "./ChangeButton";
 import { ResultElement } from "./ResultElemet";
 import CurrencyElement from "./CurrencyElement";
 import AmountElement from "./AmountElement";
+import Clock from "./Clock";
 import { currencies } from "./currencies";
 import { useState } from "react";
 import "../Form/index.css";
@@ -30,6 +31,7 @@ const Form = () => {
     return (
         <form onSubmit={onFormSubmit}
             className="form">
+            <Clock/>
             <fieldset 
                 className="form__fieldset">
                 <legend 
