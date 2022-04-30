@@ -1,14 +1,13 @@
+import { StyledLabel, StyledLabelText, StyledInput } from "./styled";
+
 const AmountElement = ({amount, setAmount}) => {
     return (
         <p>
-            <label 
-                className="form__label">
-                <span 
-                    className="form__labelText"
-                >
+            <StyledLabel>
+                <StyledLabelText>
                     Amount to change (PLN):
-                </span>
-                <input 
+                </StyledLabelText>
+                <StyledInput 
                     type="number"
                     value={amount}
                     onChange={({target}) => setAmount(target.value)}
@@ -17,7 +16,7 @@ const AmountElement = ({amount, setAmount}) => {
                     className="form__input" 
                     required
                 />
-            </label>
+            </StyledLabel>
         </p>
     )
 };

@@ -1,39 +1,3 @@
-
-.form__label {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-@media (max-width: 600px) {
-    .form__label {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-}
-
-.form__labelText {
-    align-self: center;
-}
-
-.form__input {
-    max-width: 200px;
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 1.5;
-}
-
-@media (max-width: 600px) {
-    .form__input {
-        max-width: 500px;
-    }
-}
-
 .form__button {
     width: 100%;
     padding: 10px 20px;

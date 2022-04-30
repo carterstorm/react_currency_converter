@@ -1,17 +1,15 @@
 import { currencies } from "../currencies";
+import { StyledInput, StyledLabel, StyledLabelText } from "../AmountElement/styled";
 
 const CurrencyElement = ({currency, setCurrency}) => {
     return (
         <p>
-            <label 
-                className="form__label">
-                    <span 
-                        className="form__labelText"
-                    >
+            <StyledLabel>
+                    <StyledLabelText>
                         Currency:
-                    </span>
-                    <select 
-                        className="form__input"
+                    </StyledLabelText>
+                    <StyledInput
+                        as="select"
                         value={currency}
                         onChange={({target}) => setCurrency(target.value)}
                     >
@@ -24,8 +22,8 @@ const CurrencyElement = ({currency, setCurrency}) => {
                             </option>
                             ))
                         }
-                    </select>
-            </label>
+                    </StyledInput>
+            </StyledLabel>
         </p>
     )
 };
