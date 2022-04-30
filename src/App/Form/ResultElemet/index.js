@@ -1,8 +1,10 @@
+import { StyledResultElement } from "./styled";
+
 const ResultElement = ({result}) => {
 
     return (
-        <p 
-            className="form__updateElement">
+        <StyledResultElement 
+            >
             {result && (
                 <>
                     {
@@ -13,7 +15,7 @@ const ResultElement = ({result}) => {
                     } 
                 </>
             )}
-        </p>
+        </StyledResultElement>
     )
 };
 
