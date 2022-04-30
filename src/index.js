@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './App/index.css';
 import App from './App/index.js';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyles } from "./GlobalStyles";

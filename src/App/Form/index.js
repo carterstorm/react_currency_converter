@@ -6,7 +6,6 @@ import Clock from "./Clock";
 import { currencies } from "./currencies";
 import { useState } from "react";
 import { StyledForm, StyledFieldset, StyledLegend } from "./styled";
-import "../Form/index.css";
 
 const Form = () => {
 
