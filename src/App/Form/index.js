@@ -5,6 +5,7 @@ import AmountElement from "./AmountElement";
 import Clock from "./Clock";
 import { currencies } from "./currencies";
 import { useState } from "react";
+import { StyledForm } from "./styled";
 import "../Form/index.css";
 
 const Form = () => {
@@ -29,8 +30,7 @@ const Form = () => {
     }
 
     return (
-        <form onSubmit={onFormSubmit}
-            className="form">
+        <StyledForm onSubmit={onFormSubmit}>
             <Clock/>
             <fieldset 
                 className="form__fieldset">
@@ -43,7 +43,7 @@ const Form = () => {
             </fieldset>
             <ChangeButton/>
             <ResultElement result={result}/>
-        </form>
+        </StyledForm>
     )
 };
 
