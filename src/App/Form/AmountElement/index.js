@@ -13,7 +13,6 @@ const AmountElement = ({amount, setAmount}) => {
                     onChange={({target}) => setAmount(target.value)}
                     step="0.01" 
                     min="1" 
-                    className="form__input" 
                     required
                 />
             </StyledLabel>
