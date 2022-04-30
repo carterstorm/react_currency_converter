@@ -1,9 +1,10 @@
+import { StyledButton } from "./styled";
+
 const ChangeButton = () => {
     return (
-        <button 
-            className="form__button">
-                Change
-        </button>
+        <StyledButton>
+            Change
+        </StyledButton>
     )
 };
 
