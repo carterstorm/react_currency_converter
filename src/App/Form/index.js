@@ -5,7 +5,7 @@ import AmountElement from "./AmountElement";
 import Clock from "./Clock";
 import { currencies } from "./currencies";
 import { useState } from "react";
-import { StyledForm } from "./styled";
+import { StyledForm, StyledFieldset, StyledLegend } from "./styled";
 import "../Form/index.css";
 
 const Form = () => {
@@ -32,15 +32,13 @@ const Form = () => {
     return (
         <StyledForm onSubmit={onFormSubmit}>
             <Clock/>
-            <fieldset 
-                className="form__fieldset">
-                <legend 
-                    className="form__legend">
-                        Currency converter 😉
-                </legend>
+            <StyledFieldset>
+                <StyledLegend>
+                    Currency converter 😉
+                </StyledLegend>
                 <CurrencyElement currency={currency} setCurrency={setCurrency}/>
                 <AmountElement amount={amount} setAmount={setAmount}/>
-            </fieldset>
+            </StyledFieldset>
             <ChangeButton/>
             <ResultElement result={result}/>
         </StyledForm>

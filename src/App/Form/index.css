@@ -1,18 +1,3 @@
-.form__fieldset {
-    padding: 10px 15px;
-    margin: 0;
-    margin-bottom: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-}
-
-.form__legend {
-    padding: 10px 40px;
-    border-radius: 5px;
-    background-color: rgb(50, 155, 55);
-    color: white;
-    text-align: center;
-}
 
 .form__label {
     max-width: 500px;
