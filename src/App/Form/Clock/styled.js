@@ -6,7 +6,7 @@ export const ClockElement = styled.p`
     font-size: 12px;
 
 
-@media (max-width: 600px) {
+@media (max-width: ${({theme}) => theme.screen.mobile}px) {
     text-align: center;
 }
 `;

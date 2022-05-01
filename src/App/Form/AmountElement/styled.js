@@ -6,7 +6,7 @@ export const StyledLabel = styled.label`
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 600px) {
+    @media (max-width: ${({theme}) => theme.screen.mobile}px) {
         flex-direction: column;
         align-items: center;
         gap: 10px;
@@ -26,7 +26,7 @@ export const StyledInput = styled.input`
     text-align: center;
     line-height: 1.5;
 
-    @media (max-width: 600px) {
+    @media (max-width: ${({theme}) => theme.screen.mobile}px) {
         max-width: 500px;
     }
 `;
