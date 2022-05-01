@@ -3,18 +3,18 @@ import styled from "styled-components";
 export const StyledButton = styled.button`
     width: 100%;
     padding: 10px 20px;
-    background-color: rgb(50, 155, 55);
+    background-color: ${({theme}) => theme.colors.apple};
     border: none;
     border-radius: 5px;
-    color: white;
+    color: ${({theme}) => theme.colors.white};
     transition: .2s;
     cursor: pointer;
 
     &:hover {
-        background-color: rgb(65, 181, 71);
+        background-color: ${({theme}) => theme.colors.apple_1};
     }
 
     &:active {
-        background-color: rgb(88, 211, 94);
+        background-color: ${({theme}) => theme.colors.emerald};
     }
 `;

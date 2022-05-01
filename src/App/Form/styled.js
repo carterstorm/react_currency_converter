@@ -5,7 +5,7 @@ export const StyledForm = styled.form`
     width: 100%;
     padding: 40px;
     padding-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: ${({theme}) => theme.colors.background_transparent};
     border-radius: 15px;
 `;
 
@@ -13,14 +13,14 @@ export const StyledFieldset = styled.fieldset`
     padding: 10px 15px;
     margin: 0;
     margin-bottom: 10px;
-    border: 1px solid #000;
+    border: 1px solid ${({theme}) => theme.colors.black};
     border-radius: 5px;
 `;
 
 export const StyledLegend = styled.legend`
     padding: 10px 40px;
     border-radius: 5px;
-    background-color: rgb(50, 155, 55);
-    color: white;
+    background-color: ${({theme}) => theme.colors.apple};
+    color: ${({theme}) => theme.colors.white};
     text-align: center;
 `;
