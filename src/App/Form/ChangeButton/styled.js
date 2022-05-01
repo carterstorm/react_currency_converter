@@ -5,7 +5,7 @@ export const StyledButton = styled.button`
     padding: 10px 20px;
     background-color: ${({theme}) => theme.colors.apple};
     border: none;
-    border-radius: 5px;
+    border-radius: ${({theme}) => theme.border_radius.first}px;
     color: ${({theme}) => theme.colors.white};
     transition: .2s;
     cursor: pointer;

@@ -22,7 +22,7 @@ export const StyledInput = styled.input`
     width: 100%;
     padding: 5px;
     border: 1px solid ${({theme}) => theme.colors.black};
-    border-radius: 5px;
+    border-radius: ${({theme}) => theme.border_radius.first}px;
     text-align: center;
     line-height: 1.5;
 

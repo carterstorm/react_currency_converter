@@ -11,6 +11,10 @@ const theme = {
         white: "#fff",
         background_transparent: "rgba(255, 255, 255, 0.3)",
     },
+    border_radius: {
+        first: 5,
+        secound: 15,
+    }
 }
 
 export default theme;
