@@ -7,6 +7,7 @@ import { currencies } from "./currencies";
 import { useState } from "react";
 import { StyledForm, StyledFieldset, StyledLegend } from "./styled";
 import { useApiRates } from "../../useRates";
+import { Loading } from "./Loading/styled";
 
 const Form = () => {
 
@@ -33,6 +34,7 @@ const Form = () => {
         <StyledForm onSubmit={onFormSubmit}>
             <Clock/>
             <StyledFieldset>
+                <Loading></Loading>
                 <StyledLegend>
                     Currency converter 😉
                 </StyledLegend>
