@@ -12,8 +12,16 @@ export const useApiRates = () => {
                 const response = await axios.get("https://api.exchangerate.host/latest?base=PLN");
                 const {rate, date} = response.data;
 
-            } catch(error) {
-                console.error(error);
+                setApiRates({
+                    state: "Succes!",
+                    rate,
+                    date,
+                });
+
+            } catch {
+                setApiRates({
+                    state: "Error",
+                });
             };
         };
 
