@@ -7,14 +7,15 @@ export const StyledButton = styled.button`
     border: none;
     border-radius: ${({theme}) => theme.border_radius.first}px;
     color: ${({theme}) => theme.colors.white};
-    transition: .2s;
+    transition: .1s;
     cursor: pointer;
 
     &:hover {
-        background-color: ${({theme}) => theme.colors.apple_1};
+        filter: brightness(110%);
     }
 
     &:active {
-        background-color: ${({theme}) => theme.colors.emerald};
+        filter: brightness(120%);
+        transform: scale(1.05);
     }
 `;

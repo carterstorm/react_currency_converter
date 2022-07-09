@@ -54,7 +54,9 @@ const Form = () => {
                     : 
                         apiRates.state === "error" ? (
                             <Failure>
-                                Something go wrong... Please check your internet connection. <br/>If you are connected to the Internet, the error is probably on our side. Please try again later...
+                                Something go wrong... Please check your internet connection. <br/>
+                                If you are connected to the Internet, the error is probably on our side. <br/>
+                                Please try again later...
                             </Failure>
                         )
                      : (

@@ -9,7 +9,7 @@ export const useApiRates = () => {
     useEffect(() => {
         const getRates = async () => {
             try {
-                const response = await axios.get("https://api.exchangerate.host/latest?base=PLN");
+                const response = await axios.get("https://api/.exchangerate.host/latest?base=PLN");
                 const {rates, date} = response.data;
 
                 setApiRates({
@@ -25,7 +25,7 @@ export const useApiRates = () => {
             };
         };
     
-        setTimeout(getRates, 1*1000);
+        setTimeout(getRates, 2*1000);
     }, []);
 
     return apiRates;    
