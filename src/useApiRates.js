@@ -1,32 +1,32 @@
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
 
 export const useApiRates = () => {
     const [apiRates, setApiRates] = useState({
-        state: "Loading...",
+        state: "loading",
     });
-
+    
     useEffect(() => {
         const getRates = async () => {
             try {
                 const response = await axios.get("https://api.exchangerate.host/latest?base=PLN");
-                const {rate, date} = response.data;
+                const {rates, date} = response.data;
 
                 setApiRates({
-                    state: "Succes!",
-                    rate,
+                    state: "success",
+                    rates,
                     date,
                 });
-
+    
             } catch {
                 setApiRates({
-                    state: "Error",
+                    state: "error",
                 });
             };
         };
-
+    
         setTimeout(getRates, 1*1000);
     }, []);
 
-    return apiRates;
+    return apiRates;    
 };

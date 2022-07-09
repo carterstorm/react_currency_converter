@@ -1,5 +1,5 @@
 import { ClockElement } from "./styled";
-import { useDate } from "../../../useDate";
+import { useDate } from "./useDate";
 
 const Clock = () => {
 
