@@ -6,11 +6,11 @@ import { Failure } from "./Failure/styled";
 import Clock from "./Clock";
 import { 
     StyledForm,
-    StyledFieldset,
-    StyledLegend,
-    StyledLabel,
-    StyledLabelText,
-    StyledInput 
+    Fieldset,
+    Legend,
+    Label,
+    LabelText,
+    Input 
 } from "./styled";
 
 import { useApiRates } from "../../useApiRates";
@@ -41,10 +41,10 @@ const Form = () => {
     return (
         <StyledForm onSubmit={onFormSubmit}>
             <Clock/>
-            <StyledFieldset>
-                <StyledLegend>
+            <Fieldset>
+                <Legend>
                     Currency converter 😉
-                </StyledLegend>
+                </Legend>
 
                 {apiRates.state === "loading" ?  (
                         <Loading>
@@ -59,11 +59,11 @@ const Form = () => {
                         )
                      : (
                         <>
-                            <StyledLabel>
-                                <StyledLabelText>
+                            <Label>
+                                <LabelText>
                                     Currency:
-                                </StyledLabelText>
-                                <StyledInput
+                                </LabelText>
+                                <Input
                                     as="select"
                                     value={currency}
                                     onChange={({target}) => setCurrency(target.value)}
@@ -76,14 +76,14 @@ const Form = () => {
                                             {currency}
                                         </option>
                                     ))}
-                                </StyledInput>
-                            </StyledLabel>
+                                </Input>
+                            </Label>
 
-                            <StyledLabel>
-                                <StyledLabelText>
+                            <Label>
+                                <LabelText>
                                     Amount to change (PLN):
-                                </StyledLabelText>
-                                <StyledInput 
+                                </LabelText>
+                                <Input 
                                     type="number"
                                     value={amount}
                                     onChange={({target}) => setAmount(target.value)}
@@ -91,11 +91,11 @@ const Form = () => {
                                     min="1" 
                                     required
                                 />
-                            </StyledLabel>
+                            </Label>
                         </>
                     )
                 }
-            </StyledFieldset>
+            </Fieldset>
             <ChangeButton/>
             <ResultElement result={result}/>
         </StyledForm>

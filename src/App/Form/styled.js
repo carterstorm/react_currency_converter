@@ -9,7 +9,7 @@ export const StyledForm = styled.form`
     border-radius: ${({theme}) => theme.border_radius.secound}px;
 `;
 
-export const StyledFieldset = styled.fieldset`
+export const Fieldset = styled.fieldset`
     padding: 10px 15px;
     margin: 0;
     margin-bottom: 10px;
@@ -17,7 +17,7 @@ export const StyledFieldset = styled.fieldset`
     border-radius: ${({theme}) => theme.border_radius.first}px;
 `;
 
-export const StyledLegend = styled.legend`
+export const Legend = styled.legend`
     padding: 10px 40px;
     border-radius: ${({theme}) => theme.border_radius.first}px;
     background-color: ${({theme}) => theme.colors.apple};
@@ -25,7 +25,7 @@ export const StyledLegend = styled.legend`
     text-align: center;
 `;
 
-export const StyledLabel = styled.label`
+export const Label = styled.label`
     max-width: 500px;
     margin: 10px auto;
     display: flex;
@@ -38,11 +38,11 @@ export const StyledLabel = styled.label`
 }
 `;
 
-export const StyledLabelText = styled.span`
+export const LabelText = styled.span`
     align-self: center;
 `;
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
     max-width: 200px;
     width: 100%;
     padding: 5px;
